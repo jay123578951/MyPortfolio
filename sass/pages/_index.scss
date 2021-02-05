@@ -1,0 +1,253 @@
+body {
+  background: #F7F7F8;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.1);
+  background: #fff;
+  @media (min-width: 768px) {
+    padding: 3rem 2rem;
+  }
+}
+
+.text-secondary {
+  color: rgba(54, 54, 54, 0.7);
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  .material-icons {
+    margin-top: 1px;
+    margin-right: .5rem;
+    vertical-align: top;
+    color: rgba(54, 54, 54, 0.7);
+  }
+}
+
+// 關於
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+  @media (min-width: 768px) {
+    flex-wrap: nowrap;
+  }
+  .about__selfie {
+    width: auto;
+    margin-right: 3rem;
+    margin-bottom: 1.5rem;
+    @media (min-width: 768px) {
+      margin-bottom: 0;
+    }
+  }
+  .about__info {
+    position: relative;
+    h1 {
+      font-size: 1.875rem;
+      margin-bottom: .5rem;
+    }
+    p {
+      margin-bottom: 1rem;
+    }
+    .about__info__contact {
+      display: flex;
+      flex-wrap: wrap;
+      @media (min-width: 768px) {
+        flex-wrap: nowrap;
+      }
+      a {
+        margin-right: 1.25rem;
+        color: rgba(54, 54, 54, 0.7);;
+      }
+      span {
+        vertical-align: sub;
+        margin-right: .25rem;
+        font-size: 1.25rem;
+        color: rgba(54, 54, 54, 0.7);
+      }
+    }
+    .about__info__job {
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
+      bottom: 0;
+      left: 0;
+      font-size: 0.875rem;
+      @media (min-width: 768px) {
+        position: absolute;
+      }
+      li {
+        margin-right: 0.5rem;
+        border: 1px solid #ddd;
+        border-radius: 15px;
+        padding: 0.25rem 1rem;
+        margin-bottom: 0.5rem;
+        @media (min-width: 768px) {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+// 作品
+.works {
+  margin-bottom: 4rem;
+}
+.works__info {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  @media (min-width: 768px) {
+    grid-gap: 2rem;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+  }
+  .works__info__img {
+    position: relative;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    &:hover {
+      .works__info__img--hover {
+        opacity: 1;
+        transform: translateZ(0) scale(1);
+      }
+    }
+  }
+  .works__info__img--hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    color: #fff;
+    background: rgba(54,54,54,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateZ(0) scale(1.05);
+    transition: all .3s ease;
+  }
+  .works__info__img__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+  .img01 {
+    background: #4c6d5a;
+  }
+  .img02 {
+    background: #B88B40;
+  }
+  .img03 {
+    background: #04B0FF;
+  }
+}
+
+// 經歷
+.employment {
+  margin-bottom: 5rem;
+}
+.employment__block {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 1.5rem;
+  &:before {
+    position: absolute;
+    display: inline-block;
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 90%;
+    background:rgba(54,54,54,0.6);
+    left: .5rem;
+    top: 6px;
+    transform: translate(0, 0);
+  }
+  &:after {
+    position: absolute;
+    display: inline-block;
+    content: "";
+    width: 1px;
+    height: 100%;
+    background: rgba(54,54,54,0.3);
+    left: 11px;
+    top: 18px;
+  }
+  h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+  }
+  p {
+    font-size: 0.875rem;
+    color: rgba(54,54,54,0.6);;
+    margin-bottom: 1rem;
+  }
+  li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: .5rem;
+    &:before {
+      position: absolute;
+      display: inline-block;
+      content: "";
+      width: 4px;
+      height: 4px;
+      border-radius: 90%;
+      background: #222;
+      left: .5rem;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+  }
+}
+
+// 技能
+.skills {
+  margin-bottom: 4rem;
+}
+.skills__block {
+  display: flex;
+  flex-wrap: wrap;
+  .skills__block__frontEnd {
+    margin-right: 3rem;
+    margin-bottom: 1rem;
+    @media (min-width: 768px) {
+      margin-bottom: 0;
+    }
+  }
+  .skills__block__title {
+    font-size: 1.25rem;
+    margin-bottom: .5rem;
+  }
+  li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    &:before {
+      position: absolute;
+      display: inline-block;
+      content: "";
+      width: 4px;
+      height: 4px;
+      border-radius: 90%;
+      background: #222;
+      left: .5rem;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+  }
+}

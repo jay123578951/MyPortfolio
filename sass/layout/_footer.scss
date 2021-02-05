@@ -1,0 +1,32 @@
+.footer {
+  background: #000;
+  text-align: center;
+  li {
+    color: #fff;
+  }
+  a {
+    color: #fff;
+  }
+}
+.footer__contact {
+  font-size: 25px;
+  padding: 76px 0;
+  li {
+    margin-bottom: 12px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+.footer__copy {
+  font-size: 17px;
+  padding: 30px 0 48px 0;
+  .footer__copy__brand {
+    height: 92px;
+    margin: 0 auto;
+    margin-bottom: 9px;
+  }
+  .footer__copy__title {
+    margin-bottom: 11px;
+  }
+}
